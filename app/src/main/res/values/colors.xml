@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="philhealth_green">#00A550</color>
+    <color name="philhealth_green_dark">#007A3D</color>
+    <color name="white">#FFFFFF</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="text_gray">#888888</color>
+    <color name="black">#000000</color>
+</resources>
