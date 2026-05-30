@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Profile"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔔"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Green Header Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:background="@color/philhealth_green"
+                android:gravity="center"
+                android:padding="16dp">
+
+                <!-- Avatar Circle -->
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/circle_avatar"
+                    android:text="👤"
+                    android:textSize="36sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tvProfileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Juan Dela Cruz"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/tvProfileEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="email@gmail.com"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PhilHealth Member"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  •  "
+                        android:textSize="12sp"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/tvProfileLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Metro Manila"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnEditProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Edit Profile"
+                    android:textSize="12sp"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/philhealth_green"/>
+
+            </LinearLayout>
+
+            <!-- Tabs -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tabPersonalInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Personal Info"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/tabSettings"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Settings"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_gray"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/light_gray"/>
+
+            <!-- Personal Info Fields -->
+            <LinearLayout
+                android:id="@+id/layoutPersonalInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Date of Birth -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Date of Birth" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <TextView android:id="@+id/tvDOB" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:text="—" android:textSize="15sp" android:textColor="@color/black"
+                    android:background="@drawable/input_background" android:paddingStart="12dp"
+                    android:gravity="center_vertical" android:layout_marginBottom="12dp" android:layout_marginTop="4dp"/>
+
+                <!-- Citizenship -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Citizenship" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <TextView android:id="@+id/tvCitizenship" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:text="—" android:textSize="15sp" android:textColor="@color/black"
+                    android:background="@drawable/input_background" android:paddingStart="12dp"
+                    android:gravity="center_vertical" android:layout_marginBottom="12dp" android:layout_marginTop="4dp"/>
+
+                <!-- Phone Number -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Phone Number" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <TextView android:id="@+id/tvPhone" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:text="—" android:textSize="15sp" android:textColor="@color/black"
+                    android:background="@drawable/input_background" android:paddingStart="12dp"
+                    android:gravity="center_vertical" android:layout_marginBottom="12dp" android:layout_marginTop="4dp"/>
+
+                <!-- Current Address -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Current Address" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <TextView android:id="@+id/tvAddress" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:text="—" android:textSize="15sp" android:textColor="@color/black"
+                    android:background="@drawable/input_background" android:paddingStart="12dp"
+                    android:gravity="center_vertical" android:layout_marginBottom="12dp" android:layout_marginTop="4dp"/>
+
+                <!-- Civil Status -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Civil Status" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <TextView android:id="@+id/tvCivilStatus" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:text="—" android:textSize="15sp" android:textColor="@color/black"
+                    android:background="@drawable/input_background" android:paddingStart="12dp"
+                    android:gravity="center_vertical" android:layout_marginBottom="12dp" android:layout_marginTop="4dp"/>
+
+                <!-- Update Button -->
+                <Button
+                    android:id="@+id/btnUpdateMembership"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Update Membership"
+                    android:textSize="15sp"
+                    android:backgroundTint="@color/philhealth_green"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:elevation="8dp">
+
+        <LinearLayout android:id="@+id/navMenu" android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⊞" android:textSize="20sp" android:textColor="@color/text_gray"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Menu" android:textSize="10sp" android:textColor="@color/text_gray"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navSearch" android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔍" android:textSize="20sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Search" android:textSize="10sp" android:textColor="@color/text_gray"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navHome" android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏠" android:textSize="20sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Home" android:textSize="10sp" android:textColor="@color/text_gray"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navProfile" android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="👤" android:textSize="20sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Profile" android:textSize="10sp" android:textColor="@color/philhealth_green"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navInbox" android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✉" android:textSize="20sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Inbox" android:textSize="10sp" android:textColor="@color/text_gray"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

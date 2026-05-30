@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="‹"
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:paddingEnd="12dp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PhilHealth"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/philhealth_green"
+            android:gravity="center"/>
+        <View android:layout_width="40dp" android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Existing\nMembership Form"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:paddingBottom="4dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update data from an existing membership form."
+        android:textSize="12sp"
+        android:textColor="@color/text_gray"
+        android:gravity="center"
+        android:paddingBottom="8dp"/>
+
+    <!-- Step Indicator -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingBottom="8dp">
+        <View android:id="@+id/step1Indicator" android:layout_width="0dp" android:layout_height="6dp"
+            android:layout_weight="1" android:layout_marginEnd="4dp" android:background="@color/philhealth_green"/>
+        <View android:id="@+id/step2Indicator" android:layout_width="0dp" android:layout_height="6dp"
+            android:layout_weight="1" android:layout_marginEnd="4dp" android:background="@color/light_gray"/>
+        <View android:id="@+id/step3Indicator" android:layout_width="0dp" android:layout_height="6dp"
+            android:layout_weight="1" android:background="@color/light_gray"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvStepLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Page 1 of 3: Personal Details"
+        android:textSize="13sp"
+        android:textColor="@color/text_gray"
+        android:gravity="center"
+        android:paddingBottom="8dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- STEP 1: Personal Details -->
+            <LinearLayout android:id="@+id/layoutStep1"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="I. Personal Details" android:textStyle="bold" android:textSize="15sp"
+                    android:textColor="@color/black" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Preferred Konsulta Provider" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <EditText android:id="@+id/etKonsulta" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/input_background" android:paddingStart="12dp" android:paddingEnd="12dp" android:textSize="13sp" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Member Name" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <EditText android:id="@+id/etMemberName" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/input_background" android:paddingStart="12dp" android:paddingEnd="12dp" android:textSize="13sp" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mother's Maiden Name" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <EditText android:id="@+id/etMotherName" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/input_background" android:paddingStart="12dp" android:paddingEnd="12dp" android:textSize="13sp" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Spouse Name" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <EditText android:id="@+id/etSpouseName" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/input_background" android:paddingStart="12dp" android:paddingEnd="12dp" android:textSize="13sp" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Date of Birth (YYYY-MM-DD)" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <EditText android:id="@+id/etDOB" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/input_background" android:paddingStart="12dp" android:paddingEnd="12dp" android:textSize="13sp" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Place of Birth" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <EditText android:id="@+id/etPlaceOfBirth" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/input_background" android:paddingStart="12dp" android:paddingEnd="12dp" android:textSize="13sp" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sex" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <Button android:id="@+id/btnFemale" android:layout_width="wrap_content" android:layout_height="40dp"
+                        android:text="Female" android:textSize="13sp" android:backgroundTint="@color/light_gray" android:textColor="@color/black" android:layout_marginEnd="8dp"/>
+                    <Button android:id="@+id/btnMale" android:layout_width="wrap_content" android:layout_height="40dp"
+                        android:text="Male" android:textSize="13sp" android:backgroundTint="@color/light_gray" android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Civil Status" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <Spinner android:id="@+id/spinnerCivilStatus" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/input_background" android:paddingStart="12dp" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Citizenship" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <Spinner android:id="@+id/spinnerCitizenship" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/input_background" android:paddingStart="12dp" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Permanent Address" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <EditText android:id="@+id/etPermanentAddress" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/input_background" android:paddingStart="12dp" android:paddingEnd="12dp" android:textSize="13sp" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mailing Address" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <EditText android:id="@+id/etMailingAddress" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/input_background" android:paddingStart="12dp" android:paddingEnd="12dp" android:textSize="13sp" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mobile Number" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <EditText android:id="@+id/etMobile" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/input_background" android:paddingStart="12dp" android:paddingEnd="12dp" android:inputType="phone" android:textSize="13sp" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Email Address" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <EditText android:id="@+id/etEmail" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/input_background" android:paddingStart="12dp" android:paddingEnd="12dp" android:inputType="textEmailAddress" android:textSize="13sp" android:layout_marginBottom="12dp"/>
+
+            </LinearLayout>
+
+            <!-- STEP 2: Dependents -->
+            <LinearLayout android:id="@+id/layoutStep2"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:visibility="gone">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="IV. Declaration of Dependents" android:textStyle="bold" android:textSize="15sp"
+                    android:textColor="@color/black" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Dependent 1" android:textStyle="bold" android:textSize="13sp"
+                    android:textColor="@color/black" android:layout_marginBottom="8dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dependent Name" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <EditText android:id="@+id/etDependentName" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/input_background" android:paddingStart="12dp" android:paddingEnd="12dp" android:textSize="13sp" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Relationship" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <EditText android:id="@+id/etRelationship" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/input_background" android:paddingStart="12dp" android:paddingEnd="12dp" android:textSize="13sp" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dependent with Permanent Disability?" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="16dp">
+                    <Button android:id="@+id/btnDisabilityYes" android:layout_width="wrap_content" android:layout_height="40dp"
+                        android:text="Yes" android:textSize="13sp" android:backgroundTint="@color/light_gray" android:textColor="@color/black" android:layout_marginEnd="8dp"/>
+                    <Button android:id="@+id/btnDisabilityNo" android:layout_width="wrap_content" android:layout_height="40dp"
+                        android:text="No" android:textSize="13sp" android:backgroundTint="@color/light_gray" android:textColor="@color/black"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- STEP 3: Member Type -->
+            <LinearLayout android:id="@+id/layoutStep3"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:visibility="gone">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="IV. Member Type" android:textStyle="bold" android:textSize="15sp"
+                    android:textColor="@color/black" android:layout_marginBottom="4dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Employment Information" android:textStyle="bold" android:textSize="13sp"
+                    android:textColor="@color/black" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Monthly Income" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <EditText android:id="@+id/etIncome" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/input_background" android:paddingStart="12dp" android:paddingEnd="12dp" android:inputType="number" android:textSize="13sp" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Profession" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <EditText android:id="@+id/etProfession" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/input_background" android:paddingStart="12dp" android:paddingEnd="12dp" android:textSize="13sp" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Profession ID" android:textSize="12sp" android:textColor="@color/text_gray"/>
+                <EditText android:id="@+id/etProfessionID" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/input_background" android:paddingStart="12dp" android:paddingEnd="12dp" android:textSize="13sp" android:layout_marginBottom="12dp"/>
+
+                <Spinner android:id="@+id/spinnerMemberType" android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/input_background" android:paddingStart="12dp" android:layout_marginBottom="16dp"/>
+
+                <CheckBox android:id="@+id/cbTerms" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="I agree with the terms and condition" android:textSize="12sp" android:layout_marginBottom="8dp"/>
+                <CheckBox android:id="@+id/cbConsent" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="I give consent to use the following personal informations" android:textSize="12sp" android:layout_marginBottom="16dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnSaveProgress"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="Save current progress"
+            android:textSize="13sp"
+            android:backgroundTint="@color/light_gray"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:text="Continue"
+            android:textSize="13sp"
+            android:backgroundTint="@color/philhealth_green"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</LinearLayout>

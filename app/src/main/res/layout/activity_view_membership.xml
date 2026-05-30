@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="‹"
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:paddingEnd="12dp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PhilHealth"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/philhealth_green"
+            android:gravity="center"/>
+        <View android:layout_width="40dp" android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Membership Form"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:paddingBottom="4dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Access your PhilHealth Membership form."
+        android:textSize="12sp"
+        android:textColor="@color/text_gray"
+        android:gravity="center"
+        android:paddingBottom="12dp"/>
+
+    <!-- Submitted Forms Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:background="@drawable/input_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submitted Forms"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvPinDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="XXXX-0000-XXXX"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/tvNameDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Member Name"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_gray"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnDownload"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Download"
+                android:textSize="11sp"
+                android:backgroundTint="@color/light_gray"
+                android:textColor="@color/black"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btnPrint"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Print Form"
+                android:textSize="11sp"
+                android:backgroundTint="@color/philhealth_green"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Member Details -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="I. Personal Details" android:textStyle="bold" android:textSize="15sp"
+                android:textColor="@color/black" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Preferred Konsulta Provider" android:textSize="12sp" android:textColor="@color/text_gray"/>
+            <TextView android:id="@+id/tvKonsulta" android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="—" android:background="@drawable/input_background" android:paddingStart="12dp"
+                android:gravity="center_vertical" android:textSize="13sp" android:layout_marginBottom="12dp" android:layout_marginTop="4dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Member Name" android:textSize="12sp" android:textColor="@color/text_gray"/>
+            <TextView android:id="@+id/tvMemberName" android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="—" android:background="@drawable/input_background" android:paddingStart="12dp"
+                android:gravity="center_vertical" android:textSize="13sp" android:layout_marginBottom="12dp" android:layout_marginTop="4dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mother's Maiden Name" android:textSize="12sp" android:textColor="@color/text_gray"/>
+            <TextView android:id="@+id/tvMotherName" android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="—" android:background="@drawable/input_background" android:paddingStart="12dp"
+                android:gravity="center_vertical" android:textSize="13sp" android:layout_marginBottom="12dp" android:layout_marginTop="4dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Date of Birth" android:textSize="12sp" android:textColor="@color/text_gray"/>
+            <TextView android:id="@+id/tvDOB" android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="—" android:background="@drawable/input_background" android:paddingStart="12dp"
+                android:gravity="center_vertical" android:textSize="13sp" android:layout_marginBottom="12dp" android:layout_marginTop="4dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Place of Birth" android:textSize="12sp" android:textColor="@color/text_gray"/>
+            <TextView android:id="@+id/tvPlaceOfBirth" android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="—" android:background="@drawable/input_background" android:paddingStart="12dp"
+                android:gravity="center_vertical" android:textSize="13sp" android:layout_marginBottom="12dp" android:layout_marginTop="4dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sex" android:textSize="12sp" android:textColor="@color/text_gray"/>
+            <TextView android:id="@+id/tvSex" android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="—" android:background="@drawable/input_background" android:paddingStart="12dp"
+                android:gravity="center_vertical" android:textSize="13sp" android:layout_marginBottom="12dp" android:layout_marginTop="4dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Civil Status" android:textSize="12sp" android:textColor="@color/text_gray"/>
+            <TextView android:id="@+id/tvCivilStatus" android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="—" android:background="@drawable/input_background" android:paddingStart="12dp"
+                android:gravity="center_vertical" android:textSize="13sp" android:layout_marginBottom="12dp" android:layout_marginTop="4dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Citizenship" android:textSize="12sp" android:textColor="@color/text_gray"/>
+            <TextView android:id="@+id/tvCitizenship" android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="—" android:background="@drawable/input_background" android:paddingStart="12dp"
+                android:gravity="center_vertical" android:textSize="13sp" android:layout_marginBottom="12dp" android:layout_marginTop="4dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mobile Number" android:textSize="12sp" android:textColor="@color/text_gray"/>
+            <TextView android:id="@+id/tvMobile" android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="—" android:background="@drawable/input_background" android:paddingStart="12dp"
+                android:gravity="center_vertical" android:textSize="13sp" android:layout_marginBottom="12dp" android:layout_marginTop="4dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Email Address" android:textSize="12sp" android:textColor="@color/text_gray"/>
+            <TextView android:id="@+id/tvEmail" android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="—" android:background="@drawable/input_background" android:paddingStart="12dp"
+                android:gravity="center_vertical" android:textSize="13sp" android:layout_marginBottom="12dp" android:layout_marginTop="4dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Permanent Address" android:textSize="12sp" android:textColor="@color/text_gray"/>
+            <TextView android:id="@+id/tvAddress" android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="—" android:background="@drawable/input_background" android:paddingStart="12dp"
+                android:gravity="center_vertical" android:textSize="13sp" android:layout_marginBottom="12dp" android:layout_marginTop="4dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="III. Employment Information" android:textStyle="bold" android:textSize="15sp"
+                android:textColor="@color/black" android:layout_marginBottom="12dp" android:layout_marginTop="8dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Monthly Income" android:textSize="12sp" android:textColor="@color/text_gray"/>
+            <TextView android:id="@+id/tvIncome" android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="—" android:background="@drawable/input_background" android:paddingStart="12dp"
+                android:gravity="center_vertical" android:textSize="13sp" android:layout_marginBottom="12dp" android:layout_marginTop="4dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Profession" android:textSize="12sp" android:textColor="@color/text_gray"/>
+            <TextView android:id="@+id/tvProfession" android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="—" android:background="@drawable/input_background" android:paddingStart="12dp"
+                android:gravity="center_vertical" android:textSize="13sp" android:layout_marginBottom="12dp" android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
