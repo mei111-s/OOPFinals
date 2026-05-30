@@ -17,7 +17,8 @@ public class DashboardActivity extends AppCompatActivity {
         btnNewMembership = findViewById(R.id.btnNewMembership);
 
         btnNewMembership.setOnClickListener(v -> {
-            // Will navigate to Registration Form later
+            Intent intent = new Intent(DashboardActivity.this, RegistrationActivity.class);
+            startActivity(intent);
         });
     }
 }
